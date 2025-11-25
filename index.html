@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Didáctica</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+        }
+
+        header {
+            background-color: white;
+            padding: 15px 20px;
+        }
+
+        header img {
+            height: 70px;
+        }
+
+        nav {
+            background-color: #d90000;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .banner img {
+            width: 100%;
+            display: block;
+        }
+
+        /* ---- TÍTULO ---- */
+        .titulo {
+            text-align: center;
+            font-size: 38px;
+            font-weight: 700;
+            margin-top: 40px;
+            margin-bottom: 25px;
+            color: #222;
+        }
+
+        /* ---- PRODUCTOS ---- */
+        .productos-container {
+            background: white;
+            padding: 20px 20px 50px 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        @media(max-width: 768px) {
+            .productos-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .nombre {
+            background: #e6e6e6;
+            padding: 10px;
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        .precio {
+            padding: 12px;
+            font-size: 19px;
+            color: #d90000;
+            font-weight: 700;
+        }
+
+        /* ---- ICONO FLOTANTE WHATSAPP ---- */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 999;
+        }
+
+        .whatsapp-float img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            box-shadow: 0 0 8px rgba(0,0,0,0.3);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .whatsapp-float img:hover {
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="imagenes/logo.jpg" alt="Logo">
+    </header>
+
+    <nav>
+        <a href="link1">INICIO</a><a href="link2">NOSOTROS</a><a href="link3">PRODUCTOS</a><a href="link4">CONTACTO</a>
+    </nav>
+
+    <div class="banner">
+        <img src="imagenes/banner-portada.jpg" alt="Banner principal">
+    </div>
+
+    <!-- TÍTULO -->
+    <div class="titulo">CANASTAS CORPORATIVAS</div>
+
+    <!-- PRODUCTOS -->
+    <div class="productos-container">
+        
+        <div class="card">
+            <img src="imagenes/imagen1.jpg" alt="Nombre del Producto 1">
+            <div class="nombre">Nombre del Producto 1</div>
+            <div class="precio">S/ 25.00</div>
+        </div>
+    
+        <div class="card">
+            <img src="imagenes/imagen2.jpg" alt="Nombre del Producto 2">
+            <div class="nombre">Nombre del Producto 2</div>
+            <div class="precio">S/ 30.00</div>
+        </div>
+    
+        <div class="card">
+            <img src="imagenes/imagen3.jpg" alt="Nombre del Producto 3">
+            <div class="nombre">Nombre del Producto 3</div>
+            <div class="precio">S/ 18.50</div>
+        </div>
+    
+        <div class="card">
+            <img src="imagenes/imagen4.jpg" alt="Nombre del Producto 4">
+            <div class="nombre">Nombre del Producto 4</div>
+            <div class="precio">S/ 22.00</div>
+        </div>
+    
+    </div>
+
+    <!-- WHATSAPP FLOTANTE -->
+    <a class="whatsapp-float" href="https://wa.me/51977938305" target="_blank">
+        <img src="imagenes/whatsapp.jpg" alt="WhatsApp">
+    </a>
+
+</body>
+</html>
